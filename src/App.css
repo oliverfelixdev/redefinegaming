@@ -1,0 +1,235 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #000000;
+  --secondary-color: #dfdff2;
+  --tertiary-color: #f1ff7e;
+  --border-color: #0A0D0F;
+}
+
+@font-face {
+  font-family: "Z-Re";
+  src: url(./assets/fonts/ZENTRY-Regular.woff2);
+}
+
+@font-face {
+  font-family: "Rob-Re";
+  src: url(./assets/fonts/Roobert-Regular.woff2);
+}
+
+@font-face {
+  font-family: "Rob-Me";
+  src: url(./assets/fonts/Roobert-Medium.woff2);
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(./assets/fonts/RobotoMono-Regular.ttf);
+}
+
+@font-face {
+  font-family: "DDD";
+  src: url(./assets/fonts/L0xTDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vrtSM1J-gEPT5Ese6hmHSh0mQ.woff2);
+}
+
+html,
+body {
+  min-height: 100%;
+  width: 100%;
+}
+
+.navigation-main {
+  padding: 0.5vw 1vw;
+  background: transparent;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 3;
+}
+
+.navigation-wrap {
+  background-color: #00000010;
+  backdrop-filter: blur(40px);
+  padding: 1vw 2vw;
+}
+
+/* button Kaboom */
+.btn_main__animated {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.btn-main__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btn__content-span {
+  font: 800 0.65vw "Roboto";
+}
+
+.btn__content-svg {
+  margin-top: 5px;
+}
+
+.navigation-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5vw;
+  position: relative;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  position: relative;
+  font: 900 0.72vw "Roboto";
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  padding: .5vw 1vw;
+  border-radius: 100px;
+  transition: all .3s ease-in-out;
+  &:hover{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    transition: 0.3s opacity 0.3s;
+  }
+}
+
+.nav-link:hover svg{
+  fill: var(--primary-color);
+}
+
+.navigation__soundbar-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+}
+
+.indictor-line {
+  height: 12px;
+  width: 1px;
+  background: var(--secondary-color);
+  animation: wave 0.8s infinite;
+}
+
+/* Adjust the animation delay for each line */
+.indictor-line:nth-child(1) {
+  animation-delay: 0s;
+}
+.indictor-line:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.indictor-line:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.indictor-line:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+@keyframes wave {
+  0%, 100% {
+    height: 12px; /* Original height */
+  }
+  50% {
+    height: 20px; /* Height at peak of wave */
+  }
+}
+
+.prism{
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.prism-wrap{
+  width: 100%;
+  height: 100%;
+}
+
+.hit__area{
+  height: 15vw;
+  width: 15vw;
+  background-color: #00000000;
+  backdrop-filter: blur(100px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid var(--border-color);
+  outline: 1px solid var(--border-color);
+  border-radius: 9px;
+  z-index: 3;
+}
+
+.prism-video_wrap{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.prism-video{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.prism-content{
+  position: absolute;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  background-color: #0000001b;
+  backdrop-filter: blur(20px);
+  color: var(--secondary-color);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 0 3vw;
+}
+
+.pr-ct__top{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.prism-title{
+  line-height: 1;
+  font: 100 12vw 'Z-Re';
+}
+
+.prism-subtitle{
+  font: 100 1.1vw 'Rob-me';
+  width: 45%;
+}
+
+.pr-ct__bottom{
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}

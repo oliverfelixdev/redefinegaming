@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .custom-button {
+            position: relative;
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            width: 133px;
+            height: 51px;
+            outline: none;
+        }
+
+        .custom-button svg {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <button class="custom-button">
+        <svg viewBox="0 0 133 51" xmlns="http://www.w3.org/2000/svg" class="btnMain__shapeIcon" stroke-width="1"
+            width="133" height="51">
+            <path id="svgPath" class="btnMain__shapePath"
+                d="M110.25520833333333,6.396874999999998 L110.25520833333333,6.396874999999998 Q131.515625,6.396874999999998,131.515625,27.65729166666667 L131.515625,23.405208333333334 Q131.515625,44.665625000000006,110.25520833333333,44.665625000000006 L22.260416666666668,44.665625000000006 Q1,44.665625000000006,1,23.405208333333334 L1,27.65729166666667 Q1,6.396874999999998,22.260416666666668,6.396874999999998 Z"
+                fill="#DFDFF2"></path>
+        </svg>
+        Button Text
+    </button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+
+    <script>
+        // GSAP Timeline for the SVG path animation
+        const svgPath = document.querySelector('#svgPath');
+
+        // GSAP Animation for the path on hover
+        gsap.set(svgPath, {
+            stroke: '#000',       // Sets the stroke color of the path
+            strokeWidth: 2,       // Stroke width to make the path visible
+            fill: '#d1d1d1',         // Initially, fill is none to show stroke animation
+            strokeDasharray: svgPath.getTotalLength(), // Calculate path length
+            strokeDashoffset: svgPath.getTotalLength() // Set offset to hide the path
+        });
+
+        const tl = gsap.timeline({ paused: true });
+
+        tl.to(svgPath, {
+            strokeDashoffset: 0,    // Draws the path
+            duration: 1,            // Duration of the animation
+            ease: "power2.out"      // Easing function for smooth effect
+        });
+
+        // Event Listeners for hover
+        document.querySelector('.custom-button').addEventListener('mouseenter', () => {
+            tl.play();  // Play animation on hover
+        });
+
+        document.querySelector('.custom-button').addEventListener('mouseleave', () => {
+            tl.reverse();  // Reverse animation when hover is removed
+        });
+    </script>
+
+
+</body>
+
+</html>
