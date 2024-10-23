@@ -7,7 +7,7 @@ import Prism from './components/Prism'
 function App() {
 
   const [isSoundPlaying, setIsSoundPlaying] = useState(false)
-  const audioRef = React.useRef(new Audio('/music_main.mp3')) /* My Sound main */
+  const audioRef = React.useRef(new Audio('/music_main.mp3'))
 
   useEffect(() => {
     if (isSoundPlaying) {

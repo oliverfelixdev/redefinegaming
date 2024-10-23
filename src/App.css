@@ -8,7 +8,7 @@
   --primary-color: #000000;
   --secondary-color: #dfdff2;
   --tertiary-color: #f1ff7e;
-  --border-color: #0A0D0F;
+  --border-color: #0a0d0f;
 }
 
 @font-face {
@@ -54,7 +54,7 @@ body {
 
 .navigation-wrap {
   background-color: #00000010;
-  backdrop-filter: blur(40px);
+  /* backdrop-filter: blur(40px); */
   padding: 1vw 2vw;
 }
 
@@ -104,17 +104,17 @@ body {
   font: 900 0.72vw "Roboto";
   text-transform: uppercase;
   color: var(--secondary-color);
-  padding: .5vw 1vw;
+  padding: 0.5vw 1vw;
   border-radius: 100px;
-  transition: all .3s ease-in-out;
-  &:hover{
+  transition: all 0.3s ease-in-out;
+  &:hover {
     background-color: var(--secondary-color);
     color: var(--primary-color);
     transition: 0.3s opacity 0.3s;
   }
 }
 
-.nav-link:hover svg{
+.nav-link:hover svg {
   fill: var(--primary-color);
 }
 
@@ -147,7 +147,8 @@ body {
 }
 
 @keyframes wave {
-  0%, 100% {
+  0%,
+  100% {
     height: 12px; /* Original height */
   }
   50% {
@@ -155,81 +156,93 @@ body {
   }
 }
 
-.prism{
+.prism {
   height: 100vh;
   width: 100%;
   position: relative;
 }
 
-.prism-wrap{
+.prism-wrap {
   width: 100%;
   height: 100%;
 }
 
-.hit__area{
-  height: 15vw;
-  width: 15vw;
-  background-color: #00000000;
-  backdrop-filter: blur(100px);
+.hit__area {
+  height: 16vw;
+  width: 16vw;
+  outline: 2px solid var(--primary-color);
+  background-color: #00000010;
+  backdrop-filter: blur(30px);
+  border-radius: 10px;
   position: absolute;
-  top: 50%;
   left: 50%;
+  top: 50%;
   transform: translate(-50%, -50%);
-  border: 1px solid var(--border-color);
-  outline: 1px solid var(--border-color);
-  border-radius: 9px;
   z-index: 3;
 }
 
-.prism-video_wrap{
+.prism-wrap .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.prism-wrap .content .content-box {
+  width: 50%;
+  height: 100%;
+}
+
+.prism-wrap .content .data-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 6vw 0 0 2.5vw;
+}
+
+.prism-title {
+  font-size: 12.2vw;
+  font-family: "Z-Re";
+  line-height: 1;
+  color: var(--secondary-color);
+}
+
+.ff-prsm__setting {
+  font-feature-settings: "ss01" on;
+}
+
+.prism-subtitle {
+  color: var(--secondary-color);
+  font-size: 1.1vw;
+  font-weight: 500;
+  line-height: 1.3;
+  padding: 0 0 1vw 0;
+  font-family: "Rob-Re";
+}
+
+.prism-wrap .content .data-bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 0 2.5vw 1vw 0;
+}
+
+.prism-video_wrap {
   height: 100%;
   width: 100%;
   overflow: hidden;
 }
 
-.prism-video{
+.prism-video {
   height: 100%;
   width: 100%;
   object-fit: cover;
-}
-
-.prism-content{
-  position: absolute;
-  z-index: 2;
-  height: 100%;
-  width: 100%;
-  background-color: #0000001b;
-  backdrop-filter: blur(20px);
-  color: var(--secondary-color);
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  flex-direction: column;
-  padding: 0 3vw;
-}
-
-.pr-ct__top{
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex-direction: column;
-  width: 100%;
-}
-
-.prism-title{
-  line-height: 1;
-  font: 100 12vw 'Z-Re';
-}
-
-.prism-subtitle{
-  font: 100 1.1vw 'Rob-me';
-  width: 45%;
-}
-
-.pr-ct__bottom{
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  flex-direction: column;
-  width: 100%;
+  transition: opacity 0.5s ease;
 }
