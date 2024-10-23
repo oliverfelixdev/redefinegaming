@@ -167,7 +167,7 @@ body {
   height: 100%;
 }
 
-.hit__area {
+.window-glimp {
   height: 16vw;
   width: 16vw;
   outline: 2px solid var(--primary-color);
@@ -179,6 +179,7 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 3;
+  overflow: hidden;
 }
 
 .prism-wrap .content {
