@@ -3,6 +3,7 @@ import "./App.css"
 import Loader from './components/Loader'
 import Navigation from './components/Navigation'
 import Prism from './components/Prism'
+import WlcmZen from './components/WlcmZen'
 
 function App() {
 
@@ -37,6 +38,7 @@ function App() {
         <Navigation isSoundPlaying={isSoundPlaying} setIsSoundPlaying={setIsSoundPlaying} />
       </div>
       <Prism />
+      <WlcmZen />
     </div>
   )
 }

@@ -9,6 +9,7 @@
   --secondary-color: #dfdff2;
   --tertiary-color: #f1ff7e;
   --border-color: #0a0d0f;
+  --dis-title-size: 6.5vw;
 }
 
 @font-face {
@@ -40,6 +41,7 @@ html,
 body {
   min-height: 100%;
   width: 100%;
+  overflow-x: hidden;
 }
 
 .navigation-main {
@@ -246,4 +248,25 @@ body {
   width: 100%;
   object-fit: cover;
   transition: opacity 0.5s ease;
+}
+
+.wlcm-zentry{
+  min-height: 100vh;
+  width: 100vw;
+  position: relative;
+  background-color: var(--secondary-color);
+}
+
+.wlcm-span{
+  font: 800 0.65vw "Roboto";
+}
+
+.wlcm-title{
+  font-size: var(--dis-title-size);
+  line-height: .9;
+  font-family: 'Z-Re';
+  text-transform: uppercase;
+  text-align: center;
+  width: 65%;
+  padding: 2.5vw 0;
 }
