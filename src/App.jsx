@@ -4,8 +4,6 @@ import Loader from './components/Loader'
 import Navigation from './components/Navigation'
 import Prism from './components/Prism'
 import WlcmZen from './components/WlcmZen'
-import TiltingElement from './components/TiltingElement'
-import TiltedSVG from './components/TiltedSVG'
 
 function App() {
 
@@ -34,14 +32,12 @@ function App() {
 
 
   return (
-    <div>
-      {/* <Loader /> */}
-      <div onClick={handleGlobalClick}>
+    <div onClick={handleGlobalClick}>
+      <div>
         <Navigation isSoundPlaying={isSoundPlaying} setIsSoundPlaying={setIsSoundPlaying} />
       </div>
       <Prism />
       <WlcmZen />
-      <TiltedSVG />
     </div>
   )
 }

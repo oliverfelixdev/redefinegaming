@@ -20,8 +20,17 @@ function Prism() {
                             <p className="prism-subtitle">Enter the Metagame Layer<br />Unleash the Play Economy</p>
                             <button className="btn-trailer flex items-center justify-center flex-col overflow-hidden">
                                 <div className="prsm-btn-top absolute z-20 flex items-center justify-center gap-2">
-                                    <div className="btn-prsm__svg">
-                                        <svg xmlns="http://www.w3.org/2000/svg" className="playBtn__icon" width="20" height="20"><defs><symbol viewBox="0 0 20 20" id="icon-arrow-right" fill="#000000"><path d="M17.5 10.0013L2.5 18.3346L6.9697 10.0013L2.5 1.66797L17.5 10.0013Z" fill="#000000" /></symbol></defs><g><path d="M17.5 10.0013L2.5 18.3346L6.9697 10.0013L2.5 1.66797L17.5 10.0013Z" fill="#000000" /></g></svg>
+                                    <div className="btn-prsm__svg flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="playBtn__icon" width="15" height="15">
+                                            <defs>
+                                                <symbol viewBox="0 0 20 20" id="icon-arrow-right" fill="#000000">
+                                                    <path d="M17.5 10.0013L2.5 18.3346L6.9697 10.0013L2.5 1.66797L17.5 10.0013Z" fill="#000000" transform="scale(0.7)" />
+                                                </symbol>
+                                            </defs>
+                                            <g>
+                                                <path d="M17.5 10.0013L2.5 18.3346L6.9697 10.0013L2.5 1.66797L17.5 10.0013Z" fill="#000000" transform="scale(0.7)" />
+                                            </g>
+                                        </svg>
                                     </div>
                                     <span className="bnt-prsm__span text-xs font-semibold font-[Roboto]">WATCH TRAILER</span>
                                 </div>

@@ -8,6 +8,10 @@ function Navigation({ isSoundPlaying, setIsSoundPlaying }) {
     setIsSoundPlaying(!isAnimating); // Toggle both sound and animation
   }
 
+  const toggleIndicAnimation = () => {
+      setIsAnimating(!isAnimating)
+  }
+
   return (
     <div className='navigation-main'>
       <div className="navigation-wrap flex items-center justify-between rounded-lg">
