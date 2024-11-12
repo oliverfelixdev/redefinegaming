@@ -282,10 +282,23 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .con0 {
-  display: none;
+  position: absolute;
+  z-index: 2;
+  width: fit-content;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.con0 img{
+  margin-top: 6vw;
+  height: 30vw;
+  scale: 2;
 }
 
 .con1 {
@@ -293,27 +306,32 @@ body {
   align-items: center;
   justify-content: center;
   padding: 2vw;
+  position: relative;
+  z-index: 1;
 }
 
 .card-body {
-  height: 450px;
-  width: 320px;
+  height: 470px;
+  width: 340px;
   overflow: hidden;
-  border: 1.6px solid var(--primary-color);
+  border: 1.5px solid var(--primary-color);
   border-radius: 8px;
   box-shadow: 0px 3px 10px #0000000e;
   transform: perspective(500px) rotateX(10deg) rotateY(8deg) rotateZ(-3deg)
-    translateY(-20px); /* Added rotateY */
-  transition: transform 0.3s ease;
+    translateY(-20px);
+  transition: transform .3s linear;
+  will-change: transform;
 }
 
 .card-body img {
+  transition: transform .3s linear;
   height: 100%;
   width: 100%;
   object-fit: cover;
   object-position: center;
-  scale: 2;
+  transform: scale(2);
 }
+
 /* WLCM Bottom */
 
 .wlcm-bottom {

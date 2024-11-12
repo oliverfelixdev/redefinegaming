@@ -3,6 +3,8 @@ import React, { useState } from 'react'
 const videos = [
     'hero-cut-1.mp4',
     'hero-cut-2.mp4',
+    'hero-cut-3.mp4',
+    'hero-cut-4.mp4',
 ];
 function Prism() {
     const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
@@ -12,7 +14,7 @@ function Prism() {
     return (
         <div className='prism'>
             <div className="prism-wrap">
-                <div onClick={handleVideoChange} className="window-glimp"></div>
+                {/* <div onClick={handleVideoChange} className="window-glimp"></div> */}
                 <div className="content">
                     <div className="data-top content-box">
                         <h1 className='prism-title'><span>REDEFI<span className='ff-prsm__setting'>N</span>E</span></h1>

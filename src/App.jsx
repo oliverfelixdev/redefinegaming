@@ -4,6 +4,7 @@ import Loader from './components/Loader'
 import Navigation from './components/Navigation'
 import Prism from './components/Prism'
 import WlcmZen from './components/WlcmZen'
+import Testing from './components/Testing'
 
 function App() {
 
@@ -38,6 +39,7 @@ function App() {
       </div>
       <Prism />
       <WlcmZen />
+      {/* <Testing /> */}
     </div>
   )
 }
