@@ -19,7 +19,7 @@ function Prism() {
                     <div className="data-top content-box">
                         <h1 className='prism-title'><span>REDEFI<span className='ff-prsm__setting'>N</span>E</span></h1>
                         <div className="unleash">
-                            <p className="prism-subtitle">Enter the Metagame Layer<br />Unleash the Play Economy</p>
+                            <p className="subtitle__main">Enter the Metagame Layer<br />Unleash the Play Economy</p>
                             <button className="btn-trailer flex items-center justify-center flex-col overflow-hidden">
                                 <div className="prsm-btn-top absolute z-20 flex items-center justify-center gap-2">
                                     <div className="btn-prsm__svg flex items-center justify-center">

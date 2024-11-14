@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import "./App.css"
+import "./utils.css"
 import Loader from './components/Loader'
 import Navigation from './components/Navigation'
 import Prism from './components/Prism'
 import WlcmZen from './components/WlcmZen'
 import Testing from './components/Testing'
+import BentoCards from './components/BentoCards'
 
 function App() {
 
@@ -33,12 +35,13 @@ function App() {
 
 
   return (
-    <div onClick={handleGlobalClick}>
+    <div /* onClick={handleGlobalClick} */>
       <div>
         <Navigation isSoundPlaying={isSoundPlaying} setIsSoundPlaying={setIsSoundPlaying} />
       </div>
       <Prism />
       <WlcmZen />
+      <BentoCards />
       {/* <Testing /> */}
     </div>
   )
