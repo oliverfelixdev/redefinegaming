@@ -10,6 +10,7 @@
   --tertiary-color: #f1ff7e;
   --border-color: #0a0d0f;
   --color-contrast: #363636;
+  --color-zentry: #5724ff;
 
   --card-title-size: 4vw;
   --dis-title-size: 6.5vw;
@@ -356,7 +357,6 @@ body {
 
 .bento_cards__body .t__data {
   padding: 7vw 8vw;
-  filter: blur(1px);
 }
 
 .bento_cards__body .t__data :nth-child(1) {
@@ -383,13 +383,13 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto auto auto;
-  gap: 30px;
+  gap: 25px;
   width: 90%;
-  max-width: 1300px;
+  max-width: 1200px;
 }
 
 .grid-item {
-  background-color: #a58c0a;
+  background-color: var(--primary-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -400,6 +400,14 @@ body {
   cursor: grab;
   overflow: hidden;
   border: 1px solid var(--color-contrast);
+}
+
+.grid-item-wrap {
+  transition: transform 0.8s cubic-bezier(0.37, 0, 0.63, 1);
+}
+
+.grid-item-wrap:hover {
+  transform: scale(0.97);
 }
 
 .item1 {
@@ -441,6 +449,11 @@ body {
   padding: 1.5vw;
 }
 
+.item2 {
+  overflow: hidden;
+  position: relative;
+}
+
 .item3 {
   grid-row: span 2;
   min-height: 750px;
@@ -448,15 +461,48 @@ body {
   overflow: hidden;
 }
 
-.item4{
+.item4 {
   position: relative;
   overflow: hidden;
-  background-color: #f1ff7e;
 }
 
-.split-placeholder {
-  background-color: #a58c0a;
+.split-placeholder-1 {
+  background-color: var(--color-zentry);
   min-height: 375px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 1.5vw;
+  overflow: hidden;
+  position: relative;
+}
+
+.split-placeholder-1 .top {
+  width: 100%;
+}
+
+.split-placeholder-1 .bottom {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.split-placeholder-1 .bottom svg {
+  scale: 0.8;
+}
+
+.split-placeholder-2 {
+  min-height: 375px;
+  overflow: hidden;
+  position: relative;
+}
+
+.split-placeholder-2 video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 @media (max-width: 768px) {

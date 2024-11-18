@@ -49,24 +49,28 @@ function WlcmZen() {
   // ----------------------------------------------------Slide Animation Card (ScrollTrigger)
   const cardRef = useRef(null);
   useEffect(() => {
-    gsap.fromTo(cardRef.current,{
-      y: 400,
-      opacity: 0,
-      scale: 0.8,
-    },{
-      y: 0,
-      opacity: 1,
-      scale: 1,
-      duration: 1,
-      ease: "circ.inOut",
-      scrollTrigger: {
-        trigger: cardRef.current,
-        start: "top bottom",
-        end: "top bottom",
-        scrub: 2,
+    gsap.fromTo(
+      cardRef.current,
+      {
+        y: 400,
+        opacity: 0,
+        scale: 0.8,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        scale: 1,
+        duration: 1,
+        ease: "circ.inOut",
+        scrollTrigger: {
+          trigger: cardRef.current,
+          start: "top bottom",
+          end: "top bottom",
+          scrub: 2,
+        },
       }
-    })
-  }, [])
+    );
+  }, []);
 
   // -------------------------------------------------------------------Mouse Image Move
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
