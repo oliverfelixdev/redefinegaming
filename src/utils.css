@@ -20,8 +20,8 @@
   text-align: start;
 }
 
-.btn__grid{
-    opacity: .8;
+.btn__grid {
+  opacity: 0.8;
 }
 
 .context__title {
@@ -35,17 +35,21 @@
 }
 
 .card__title {
-    font-size: var(--card-title-size);
-    line-height: 0;
-    font-family: "Z-Re";
-    text-transform: uppercase;
-    text-align: center;
-    /* width: 65%; */
-    padding: 1.9vw 0;
-    display: block;
-    width: fit-content;
+  font-size: var(--card-title-size);
+  line-height: 0;
+  font-family: "Z-Re";
+  text-transform: uppercase;
+  text-align: center;
+  /* width: 65%; */
+  padding: 1.9vw 0;
+  display: block;
+  width: fit-content;
 }
 
 .ff-prsm__setting {
   font-feature-settings: "ss01" on;
+}
+
+.intro_minimal__span {
+  font: 800 0.65vw "Roboto";
 }

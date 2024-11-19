@@ -1,16 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 
-function Navigation({ isSoundPlaying, setIsSoundPlaying }) {
-  // sound and animation state
-  const [isAnimating, setIsAnimating] = useState(false)
-  const handleClick = () => {
-    setIsAnimating(!isAnimating);
-    setIsSoundPlaying(!isAnimating); // Toggle both sound and animation
-  }
-
-  const toggleIndicAnimation = () => {
-      setIsAnimating(!isAnimating)
-  }
+function Navigation() {
 
   return (
     <div className='navigation-main'>
@@ -76,11 +66,11 @@ function Navigation({ isSoundPlaying, setIsSoundPlaying }) {
             </a>
           ))}
 
-          <button className="navigation__soundbar-btn" onClick={handleClick}>
-            <div className={`indictor-line ${isAnimating ? 'animate' : ''}`}></div>
-            <div className={`indictor-line ${isAnimating ? 'animate' : ''}`}></div>
-            <div className={`indictor-line ${isAnimating ? 'animate' : ''}`}></div>
-            <div className={`indictor-line ${isAnimating ? 'animate' : ''}`}></div>
+          <button className="navigation__soundbar-btn">
+            <div className={`indictor-line`}></div>
+            <div className={`indictor-line`}></div>
+            <div className={`indictor-line`}></div>
+            <div className={`indictor-line`}></div>
           </button>
         </div>
       </div>
